@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.1  # Version stable récente
+    container_name: keycloak
+    environment:
+      # Identifiants de l'administrateur
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+      # Désactivation des caches pour le développement en temps réel
+      KC_SPI_THEME_WELCOME_THEME_CACHE_TEMPLATES: "false"
+      KC_SPI_THEME_WELCOME_THEME_CACHE_THEME: "false"
+      KC_SPI_THEME_LOGIN_THEME_CACHE_TEMPLATES: "false"
+      KC_SPI_THEME_LOGIN_THEME_CACHE_THEME: "false"
+    ports:
+      - "8080:8080"  # Keycloak sera accessible sur http://localhost:8080
+    volumes:
+      # Lie votre dossier 'themes' local au conteneur Docker
+      - ./themes:/opt/keycloak/themes
+    command: start-dev
