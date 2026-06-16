@@ -13,7 +13,8 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                min-height: 100vh;
+                min-height: 85vh;
+                width: 100%;
             }
 
             .login-container {
@@ -28,11 +29,15 @@
             }
 
             .kc-login-wrapper {
-                min-height: 100vh;
+                min-height: 85vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 20px;
+            }
+
+            .kc-logo-text{
+                display:none !important;
             }
         </style>
 
@@ -43,7 +48,7 @@
             <div class="login-container p-8 max-w-md w-full">
 
                 <!-- Logo -->
-                <div class="flex justify-center">
+                <div class="flex justify-center mb-8 ">
                     <img
                         src="${url.resourcesPath}/img/bjcollab-couleur.svg"
                         alt="BJCollab"
