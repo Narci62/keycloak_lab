@@ -5,9 +5,11 @@
     <#if section = "header">
 
         <script src="https://cdn.tailwindcss.com"></script>
+                <!-- Police Montserrat depuis Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
         <style>
-            body, .card-pf {
+            body, .card-pf, html  {
                 background-color: #f3f4f6;
                 background-image: url("${url.resourcesPath}/img/arriere-plan-bjcollab.svg") !important;
                 background-size: cover;
@@ -17,11 +19,15 @@
                 width: 100%;
             }
 
+            body, html {
+                font-family: 'Montserrat', sans-serif;
+            }
+
             .login-container {
                 background: rgba(255, 255, 255, 0.92);
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
-                border-radius: 12px;
+                border-radius: 8px;
             }
 
             #kc-content {
@@ -123,18 +129,18 @@
                     </div>
 
                     <!-- Conditions -->
-                    <div class="flex items-start">
+                    <div class="flex items-start text-[11px]">
                         <input
                             id="acceptTerms"
                             name="acceptTerms"
                             type="checkbox"
                             required
-                            class="w-4 h-4 mt-1 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                            class="w-3 h-3 mt-1 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                         />
 
                         <label
                             for="acceptTerms"
-                            class="ml-2 text-sm text-gray-700"
+                            class="ml-2 text-gray-700"
                         >
                             J'accepte les
                             <a
