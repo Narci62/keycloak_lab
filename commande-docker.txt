@@ -1,0 +1,16 @@
+# Construire les images et démarrer les conteneurs
+docker-compose up --build
+
+# Démarrer en arrière-plan (mode détaché)
+docker-compose up -d
+
+# Arrêter les conteneurs
+docker-compose down
+
+# Voir les logs
+docker-compose logs -f
+
+
+login
+
+admin
