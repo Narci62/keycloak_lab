@@ -19,5 +19,5 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./themes:/opt/keycloak/themes
+      - ./themes:/opt/keycloak/themes/globaloptim
     command: start-dev --proxy-headers=xforwarded --hostname-strict=false
