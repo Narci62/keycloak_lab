@@ -53,7 +53,7 @@
                 -webkit-backdrop-filter: blur(10px);
                 border-radius: 8px;
                 padding: 32px;
-                max-width: 448px;
+                max-width: 300px;
                 width: 100%;
             }
 
